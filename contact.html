@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactez-moi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <section class="contact-section">
+    <h1>📬 Contactez-moi</h1>
+
+    <div class="contact-infos">
+      <p><i class="fas fa-envelope"></i> zarasawadogo@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +226 65 83 74 25</p>
+      <p><i class="fas fa-location-dot"></i> Koudougou, Burkina Faso</p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xdkdkkjg" method="POST">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Écrivez votre message..." rows="5" required></textarea>
+
+      <!-- Redirection vers une page merci.html -->
+      <input type="hidden" name="_redirect" value="merci.html" />
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sawadogo Aminata (Hikarie)</p>
+  </footer>
+</body>
+</html>

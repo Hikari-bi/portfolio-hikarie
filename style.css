@@ -1,0 +1,273 @@
+/* --- Base --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* --- Header --- */
+header {
+  background-color: #2d70e3;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+/* --- Section projets --- */
+#projects {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* --- Carte de projet --- */
+.project-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+  color: #2d70e3;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ddd;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+}
+/* --- Bouton Voir plus --- */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #2d70e3;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1a4fbf;
+  transform: scale(1.05);
+}
+
+/* --- Animation fade + slide --- */
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.project-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.project-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+/* Ajoute plus si tu as d'autres projets */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* --- Section À propos --- */
+.about {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+  font-size: 2.4rem;
+  color: #2d70e3;
+  margin-top: 2rem;
+}
+
+.about p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.skills-list li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "✔";
+  color: #2d70e3;
+  position: absolute;
+  left: 0;
+}
+/* --- Timeline Éducation --- */
+.timeline-section {
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 3px solid #2d70e3;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -11px;
+  width: 20px;
+  height: 20px;
+  background-color: #2d70e3;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.timeline-date {
+  font-size: 1.4rem;
+  color: #2d70e3;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.timeline-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.timeline-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+.timeline-content p {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d70e3;
+}
+
+.contact-infos {
+  margin-bottom: 2rem;
+}
+
+.contact-infos p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  background: #fca311;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e48b07;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #2d70e3;
+  color: white;
+}
+
