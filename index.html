@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hikarie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Hikarie</a>
+            
+            <nav>
+                <ul>
+                   
+                    <li><a href="projet.html">Projets</a></li>
+                    <li><a href="Education.html">Éducation</a></li>
+                    <li><a href="Experienc.html">Expérience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="propos.html">A propos </a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="accueil" class="home">
+        <div class="container">
+            <div class="home-content">
+                <h1>Salut, c'est <span>Hikarie</span></h1>
+                <h2 class="typing-text">Je suis la lumière qui vous éclaire</h2>
+                <p>"La vie ne vaut rien mais rien ne vaut la vie"</p>
+                <a href="contact.html" class="btn">Me contacter</a>
+            </div>
+            
+            <div class="home-img">
+                <div class="img-container">
+                    <img src="image/amina.jpg" alt="Photo de Hikarie">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Hikari-bi"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Portfolio Hikarie. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour le menu mobile et l'animation de frappe
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+            
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+            
+            // Animation de frappe
+            const typingText = document.querySelector('.typing-text');
+            const text = typingText.textContent;
+            typingText.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    typingText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
